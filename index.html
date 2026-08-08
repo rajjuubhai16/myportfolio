@@ -187,47 +187,46 @@
       gap: 22px;
     }
 
-    /* Contact Links Grid */
+    /* Contact Links Grid (Icon Only Layout) */
     .contact-redesigned-grid {
       display: grid;
-      grid-template-columns: 1fr 1.3fr;
+      grid-template-columns: 1fr 1fr;
       gap: 36px;
       align-items: center;
     }
 
     .contact-links-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      display: flex;
+      flex-wrap: wrap;
       gap: 14px;
+      justify-content: flex-start;
     }
 
     .clean-link-card {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(0, 242, 254, 0.2);
-      padding: 15px 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(0, 242, 254, 0.25);
+      width: 52px;
+      height: 52px;
       border-radius: 16px;
       color: #ffffff;
       text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 600;
       display: flex;
       align-items: center;
-      gap: 12px;
+      justify-content: center;
       transition: all 0.25s ease;
     }
     .clean-link-card i {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       color: var(--accent-blue);
+      transition: color 0.25s ease;
     }
     .clean-link-card:hover {
       background: var(--accent-blue);
-      color: #02060d;
       border-color: var(--accent-blue);
       transform: translateY(-3px);
       box-shadow: 0 10px 25px rgba(0, 242, 254, 0.4);
     }
     .clean-link-card:hover i { color: #02060d; }
-    .clean-link-card.full-span { grid-column: span 2; }
 
     /* AI Chatbots */
     .chat-widget-box {
@@ -310,8 +309,6 @@
 
     @media (max-width: 880px) {
       .contact-redesigned-grid { grid-template-columns: 1fr; }
-      .contact-links-grid { grid-template-columns: 1fr; }
-      .clean-link-card.full-span { grid-column: span 1; }
       .viewport-container { padding: 25px 18px; border-radius: 24px; }
       header { flex-direction: column; gap: 15px; }
       .nav-pill { flex-wrap: wrap; justify-content: center; gap: 12px; }
@@ -410,11 +407,12 @@
             <p class="text-gray-400 text-xs font-mono mt-1">Chief Strategy Officer</p>
           </div>
           <div class="liquid-glass p-5 text-center">
-            <h4 class="font-bold text-white text-lg">Sanij</h4>
+            <h4 class="font-bold text-white text-lg">Sainesh</h4>
             <p class="text-gray-400 text-xs font-mono mt-1">Operations Manager</p>
           </div>
           <div class="liquid-glass p-5 text-center">
             <h4 class="font-bold text-white text-lg">Shubham</h4>
+    
             <p class="text-gray-400 text-xs font-mono mt-1">Head of Finance</p>
           </div>
         </div>
@@ -491,7 +489,7 @@
       </div>
     </section>
 
-    <!-- CERTIFICATES SECTION (Clean Glass Cards - No External Fake Images) -->
+    <!-- CERTIFICATES SECTION -->
     <section id="certs">
       <div class="section-tag"><i class="fa-solid fa-certificate"></i> Credentials</div>
       <h2 class="section-title">HONORS & <span>CERTIFICATES</span></h2>
@@ -535,7 +533,7 @@
       </div>
     </section>
 
-    <!-- CONTACT SECTION -->
+    <!-- CONTACT SECTION (Icon-Only Buttons) -->
     <section id="contact">
       <div class="contact-redesigned-grid">
         <div>
@@ -547,32 +545,32 @@
         </div>
 
         <div class="contact-links-grid">
-          <a href="mailto:B25BS3394@iitj.ac.in" class="clean-link-card full-span">
-            <i class="fa-solid fa-graduation-cap"></i> B25BS3394@iitj.ac.in
+          <a href="mailto:B25BS3394@iitj.ac.in" title="IIT Email" class="clean-link-card">
+            <i class="fa-solid fa-graduation-cap"></i>
           </a>
           
-          <a href="mailto:Rairajat244@gmail.com" class="clean-link-card full-span">
-            <i class="fa-solid fa-envelope"></i> Rairajat244@gmail.com
+          <a href="mailto:Rairajat244@gmail.com" title="Personal Email" class="clean-link-card">
+            <i class="fa-solid fa-envelope"></i>
           </a>
 
-          <a href="https://rajjuubhai16.github.io/GRIT-AGENCY-/" target="_blank" class="clean-link-card">
-            <i class="fa-solid fa-rocket"></i> GRIT AGENCY
+          <a href="https://rajjuubhai16.github.io/GRIT-AGENCY-/" target="_blank" title="GRIT Agency" class="clean-link-card">
+            <i class="fa-solid fa-rocket"></i>
           </a>
 
-          <a href="https://github.com/rajjuubhai16" target="_blank" class="clean-link-card">
-            <i class="fa-brands fa-github"></i> GitHub
+          <a href="https://github.com/rajjuubhai16" target="_blank" title="GitHub" class="clean-link-card">
+            <i class="fa-brands fa-github"></i>
           </a>
 
-          <a href="https://www.linkedin.com/in/rajat-rai-87b829328" target="_blank" class="clean-link-card">
-            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          <a href="https://www.linkedin.com/in/rajat-rai-87b829328" target="_blank" title="LinkedIn" class="clean-link-card">
+            <i class="fa-brands fa-linkedin"></i>
           </a>
 
-          <a href="https://www.instagram.com/_codewithrajat" target="_blank" class="clean-link-card">
-            <i class="fa-brands fa-instagram"></i> Instagram
+          <a href="https://www.instagram.com/_codewithrajat" target="_blank" title="Instagram" class="clean-link-card">
+            <i class="fa-brands fa-instagram"></i>
           </a>
 
-          <a href="https://youtube.com/@jee_with_rajat" target="_blank" class="clean-link-card full-span">
-            <i class="fa-brands fa-youtube text-red-500"></i> JEE with Rajat (YouTube)
+          <a href="https://youtube.com/@jee_with_rajat" target="_blank" title="YouTube" class="clean-link-card">
+            <i class="fa-brands fa-youtube"></i>
           </a>
         </div>
       </div>
@@ -777,4 +775,3 @@
   </script>
 </body>
 </html>
-
