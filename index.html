@@ -384,19 +384,19 @@
       <div class="skills-grid">
         <div class="liquid-glass p-8">
           <h3 class="text-xl font-bold text-blue-400 mb-3"><i class="fa-solid fa-brain mr-2"></i> AI & PROMPT ENGINEERING</h3>
-          <p class="text-gray-300 leading-relaxed text-sm">Advanced ChatGPT & Google Gemini API integration, prompt optimization, AI automation workflows, and maximum AI utilization.</p>
+          <p class="text-gray-300 leading-relaxed text-sm">Advanced ChatGPT & Google Gemini API integration, multi-stage prompt optimization, white coding execution, and maximum AI leverage.</p>
         </div>
         <div class="liquid-glass p-8">
           <h3 class="text-xl font-bold text-blue-400 mb-3"><i class="fa-solid fa-terminal mr-2"></i> CORE PROGRAMMING</h3>
-          <p class="text-gray-300 leading-relaxed text-sm">Python (Logic building, data processing, backend scripting), Vibe Coding, and systematic code architecture.</p>
+          <p class="text-gray-300 leading-relaxed text-sm">Python (Logic building, backend automation, and script writing), systematic coding structures, and clean development flows.</p>
         </div>
         <div class="liquid-glass p-8">
           <h3 class="text-xl font-bold text-blue-400 mb-3"><i class="fa-solid fa-globe mr-2"></i> WEB DEVELOPMENT</h3>
-          <p class="text-gray-300 leading-relaxed text-sm">HTML5, CSS3, JavaScript fundamentals, responsive web layouts, and interactive frontend deployments.</p>
+          <p class="text-gray-300 leading-relaxed text-sm">HTML5, CSS3, JavaScript fundamentals, responsive modern layouts, and interactive frontend deployments.</p>
         </div>
         <div class="liquid-glass p-8">
           <h3 class="text-xl font-bold text-blue-400 mb-3"><i class="fa-solid fa-magnifying-glass-chart mr-2"></i> RESEARCH & CONTENT</h3>
-          <p class="text-gray-300 leading-relaxed text-sm">Deep backend research, technical documentation, structural data analysis, and professional content writing.</p>
+          <p class="text-gray-300 leading-relaxed text-sm">Deep backend research, reverse-engineering concepts to conclusions, technical documentation, and professional content writing.</p>
         </div>
       </div>
     </section>
@@ -580,11 +580,11 @@
       </div>
       <div class="chat-body" id="personalChatBody">
         <div class="msg ai-msg">
-          Hi! I am **Rajat Rai AI Assistant**. Ask me about Rajat's IIT Jodhpur studies, skills, or contact details!
+          Hi! I am **Rajat Rai AI Assistant**. Ask me about Rajat's deep research, white coding, prompt workflows, IIT Jodhpur studies, or certificates!
         </div>
       </div>
       <div class="chat-footer">
-        <input type="text" id="personalChatInput" placeholder="Ask e.g. IIT Jodhpur..." onkeypress="if(event.key==='Enter') sendPersonalChat();">
+        <input type="text" id="personalChatInput" placeholder="Ask e.g. White coding, ISRO..." onkeypress="if(event.key==='Enter') sendPersonalChat();">
         <button onclick="sendPersonalChat()"><i class="fa-solid fa-paper-plane"></i></button>
       </div>
     </div>
@@ -707,7 +707,7 @@
       renderer.setSize(window.innerWidth, window.innerHeight);
     });
 
-    // CHATBOT 1 LOGIC
+    // CHATBOT 1 LOGIC (UPDATED WITH ALL DETAILED KNOWLEDGE)
     let isPersonalChatOpen = false;
     function togglePersonalChat() {
       const win = document.getElementById('personal-chat-window');
@@ -723,10 +723,20 @@
       input.value = ''; chatBody.scrollTop = chatBody.scrollHeight;
 
       setTimeout(() => {
-        let reply = "I can help you with Rajat Rai's portfolio, IIT Jodhpur studies, or contact info!";
+        let reply = "I can help you with Rajat Rai's portfolio, deep research, white coding, or technical stack!";
         const q = text.toLowerCase();
-        if (q.includes('who') || q.includes('rajat')) reply = "Rajat Rai is a GenAI Architect and BS student at **IIT Jodhpur**.";
-        else if (q.includes('email') || q.includes('contact')) reply = "Reach Rajat at IIT Email: **B25BS3394@iitj.ac.in** or Personal Email: **Rairajat244@gmail.com**.";
+        
+        if (q.includes('who') || q.includes('rajat') || q.includes('about')) {
+          reply = "Rajat Rai is an AI Architect and BS student in Applied AI and Data Science at **IIT Jodhpur**. He specializes in deep research, white coding, and building autonomous systems like EduAniAI.";
+        } else if (q.includes('skill') || q.includes('coding') || q.includes('white') || q.includes('prompt')) {
+          reply = "Rajat excels in **White Coding** and **Advanced Prompt Engineering**! He structures logic cleanly, writes multi-stage prompts to extract peak performance from AI, and masters Python backend scripting.";
+        } else if (q.includes('research') || q.includes('deep')) {
+          reply = "Rajat's superpower is **Deep Research**: whenever he handles a problem or tech stack, he reverse-engineers the roots, breaks down the backend architecture, and drives robust conclusions.";
+        } else if (q.includes('certificate') || q.includes('isro') || q.includes('hackathon')) {
+          reply = "Rajat holds top credentials including the **ISRO Bharatiya Antariksh Hackathon 2026** certificate, Google Lyria Artist award, and Google Ambassadorships!";
+        } else if (q.includes('email') || q.includes('contact')) {
+          reply = "Reach Rajat at IIT Email: **B25BS3394@iitj.ac.in** or Personal Email: **Rairajat244@gmail.com**.";
+        }
 
         chatBody.innerHTML += `<div class="msg ai-msg">${reply}</div>`;
         chatBody.scrollTop = chatBody.scrollHeight;
