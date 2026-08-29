@@ -174,6 +174,12 @@
       gap: 20px;
     }
 
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
     .cert-grid-large {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -321,6 +327,7 @@
       <a href="#" class="brand text-2xl font-extrabold text-white tracking-wider">RAJAT<span class="text-blue-400">.AI</span></a>
       <nav class="nav-pill hidden md:flex items-center gap-6">
         <a href="#about" class="text-gray-300 hover:text-blue-400 font-semibold transition">About</a>
+        <a href="#skills" class="text-gray-300 hover:text-blue-400 font-semibold transition">Skills</a>
         <a href="#services" class="text-gray-300 hover:text-blue-400 font-semibold transition">Mindset</a>
         <a href="#projects" class="text-gray-300 hover:text-blue-400 font-semibold transition">Projects</a>
         <a href="#certs" class="text-gray-300 hover:text-blue-400 font-semibold transition">Certificates</a>
@@ -356,13 +363,41 @@
       <h2 class="section-title">ABOUT <span>ME</span></h2>
       
       <div class="liquid-glass p-8 md:p-10">
-        <h3 class="text-2xl font-bold text-blue-400 mb-4">A Force. Driven By Systemic Logic.</h3>
+        <h3 class="text-2xl font-bold text-blue-400 mb-4">A Force. Driven By Deep Logic & Research.</h3>
         <p class="text-gray-300 text-lg leading-relaxed mb-4">
-          I am <strong>Rajat Rai</strong> — student within the premium <strong>BS in Applied AI and Data Science at IIT Jodhpur</strong>. My mind operates like a clean Python program — clear flow, strong logic, zero chaos.
+          I am <strong>Rajat Rai</strong> — an AI Architect and student in the <strong>BS in Applied AI and Data Science at IIT Jodhpur</strong>. My mind operates like a clean Python program: precise, highly logical, and zero-chaos. 
+        </p>
+        <p class="text-gray-300 text-lg leading-relaxed mb-4">
+          I know how to use AI to its absolute maximum potential, turning it into a superpower for building real-world systems. My core strength lies in <strong>deep research</strong> — whenever I pick up a concept, a tech stack, or a problem, I dive deep into its roots, break down its backend architecture, analyze every single moving part, and pull out a solid, clear conclusion.
         </p>
         <p class="text-gray-400 text-lg leading-relaxed">
-          I specialize in building end-to-end AI automation workflows, Web Architectures, and LLM-powered video pipelines.
+          From building autonomous AI pipelines like <em>EduAniAI</em> to executing complex automation workflows, I don't just scratch the surface; I master the core logic.
         </p>
+      </div>
+    </section>
+
+    <!-- SKILLS & EXPERTISE -->
+    <section id="skills">
+      <div class="section-tag"><i class="fa-solid fa-code"></i> Technical Stack</div>
+      <h2 class="section-title">MY <span>SKILLS</span></h2>
+
+      <div class="skills-grid">
+        <div class="liquid-glass p-8">
+          <h3 class="text-xl font-bold text-blue-400 mb-3"><i class="fa-solid fa-brain mr-2"></i> AI & PROMPT ENGINEERING</h3>
+          <p class="text-gray-300 leading-relaxed text-sm">Advanced ChatGPT & Google Gemini API integration, prompt optimization, AI automation workflows, and maximum AI utilization.</p>
+        </div>
+        <div class="liquid-glass p-8">
+          <h3 class="text-xl font-bold text-blue-400 mb-3"><i class="fa-solid fa-terminal mr-2"></i> CORE PROGRAMMING</h3>
+          <p class="text-gray-300 leading-relaxed text-sm">Python (Logic building, data processing, backend scripting), Vibe Coding, and systematic code architecture.</p>
+        </div>
+        <div class="liquid-glass p-8">
+          <h3 class="text-xl font-bold text-blue-400 mb-3"><i class="fa-solid fa-globe mr-2"></i> WEB DEVELOPMENT</h3>
+          <p class="text-gray-300 leading-relaxed text-sm">HTML5, CSS3, JavaScript fundamentals, responsive web layouts, and interactive frontend deployments.</p>
+        </div>
+        <div class="liquid-glass p-8">
+          <h3 class="text-xl font-bold text-blue-400 mb-3"><i class="fa-solid fa-magnifying-glass-chart mr-2"></i> RESEARCH & CONTENT</h3>
+          <p class="text-gray-300 leading-relaxed text-sm">Deep backend research, technical documentation, structural data analysis, and professional content writing.</p>
+        </div>
       </div>
     </section>
 
@@ -442,6 +477,15 @@
       <h2 class="section-title">HONORS & <span>CERTIFICATES</span></h2>
 
       <div class="cert-grid-large">
+        <div class="liquid-glass p-6 rounded-2xl flex flex-col justify-between border border-blue-400/40">
+          <div>
+            <div class="text-blue-400 text-2xl mb-3"><i class="fa-solid fa-rocket"></i></div>
+            <h4 class="font-bold text-white text-lg mb-2">Bharatiya Antariksh Hackathon</h4>
+            <p class="text-gray-300 text-sm leading-relaxed">Certificate of Participation for successful idea submission in the national space innovation initiative.</p>
+          </div>
+          <p class="text-blue-400 text-xs font-mono mt-4 pt-3 border-t border-white/10">ISRO (2026)</p>
+        </div>
+
         <div class="liquid-glass p-6 rounded-2xl flex flex-col justify-between">
           <div>
             <div class="text-blue-400 text-2xl mb-3"><i class="fa-solid fa-trophy"></i></div>
