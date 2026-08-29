@@ -180,10 +180,10 @@
       gap: 20px;
     }
 
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
+    .projects-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
     }
 
     .cert-grid-large {
@@ -432,44 +432,86 @@
       </div>
     </section>
 
-    <!-- FEATURED PROJECTS -->
+    <!-- FEATURED PROJECTS (VERTICAL STACK) -->
     <section id="projects">
       <div class="section-tag"><i class="fa-solid fa-laptop-code"></i> Innovation</div>
       <h2 class="section-title">FEATURED <span>PROJECTS</span></h2>
 
-      <div class="projects-grid">
-        <!-- PROJECT 1: APEX AUTOMOBILI -->
-        <div class="liquid-glass p-8 border border-blue-400/50 flex flex-col justify-between">
-          <div>
-            <div class="flex justify-between items-center mb-4">
-              <h3 class="text-2xl font-extrabold text-blue-400">Apex Automobili</h3>
-              <a href="https://rajjuubhai16.github.io/ApexAutomobili/" target="_blank" class="clean-link-card" style="width: 40px; height: 40px; border-radius: 12px;">
-                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.9rem;"></i>
-              </a>
+      <div class="projects-stack">
+        <!-- PROJECT 1: EDUANIAI (CORE AI APP) -->
+        <div class="liquid-glass p-8 md:p-10 border border-blue-400/50">
+          <div class="flex flex-wrap justify-between items-center gap-4 mb-4">
+            <div>
+              <h3 class="text-3xl font-extrabold text-blue-400">EduAniAI (EduAnim AI Pro)</h3>
+              <p class="text-cyan-300 font-semibold italic mt-1 font-mono">"Turning Static Textbooks into Interactive Movies."</p>
             </div>
-            <p class="text-cyan-300 font-semibold italic text-sm mb-4 font-mono">"Engineering Beyond Physics"</p>
-            <p class="text-gray-300 text-sm leading-relaxed mb-4">
-              A high-end hypercar showroom web application featuring 3D Motion showcases, 50+ Hypercars fleet specs, Glass Showroom, Side-by-Side comparison tools, and an interactive Bespoke Customizer.
-            </p>
+            <button onclick="toggleAppChat()" class="cta-btn-primary py-2.5 px-6 text-sm">
+              <i class="fa-solid fa-comments"></i> Ask App AI Bot
+            </button>
           </div>
-          <p class="text-blue-400 font-mono text-xs pt-3 border-t border-white/10">Tech: HTML, CSS, JavaScript, UI/UX Design</p>
+
+          <p class="text-gray-200 text-lg leading-relaxed my-6">
+            <strong>🚀 What is EduAniAI?</strong> EduAniAI (Developed by Rajat) is an advanced AI text-to-video pipeline designed to simplify education for students in Tier-2 and Tier-3 cities across India. It converts boring NCERT chapters, textbook page captures, or complex prompts into dynamic, animated, and interactive video lectures in seconds.
+          </p>
+
+          <p class="text-gray-300 text-base leading-relaxed mb-6 font-mono">
+            <strong>⚙️ How it Works:</strong> Vision/Input Captures ➔ Google Gemini 2.5 Flash API Scripting ➔ gTTS Audio Sync ➔ Python MoviePy & FFmpeg Ultrafast Rendering Presets (.mp4 output).
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
+            <div class="liquid-glass p-5">
+              <h4 class="font-bold text-blue-400 mb-2 text-lg">📘 Academic Module</h4>
+              <p class="text-gray-300 text-sm">Class 1-12 NCERT Mapped. Smart selection for subject and chapter summary videos.</p>
+            </div>
+            <div class="liquid-glass p-5">
+              <h4 class="font-bold text-blue-400 mb-2 text-lg">🤖 Character Module</h4>
+              <p class="text-gray-300 text-sm">7-minute deep-dive video simulations with avatars (Quantum Physicist, AI Teacher).</p>
+            </div>
+            <div class="liquid-glass p-5">
+              <h4 class="font-bold text-blue-400 mb-2 text-lg">🎬 Director's Module</h4>
+              <p class="text-gray-300 text-sm">Be a creator — empowers users to input custom creative prompts and produce educational movies.</p>
+            </div>
+          </div>
+
+          <p class="text-cyan-400 font-mono text-sm mt-4">
+            <strong>🚀 Scalability Vision:</strong> Transitioning towards DAG (Directed Acyclic Graph) architecture & Celery async task managers for high-volume video compilation.
+          </p>
         </div>
 
-        <!-- PROJECT 2: EDUANIAI -->
-        <div class="liquid-glass p-8 border border-blue-400/50 flex flex-col justify-between">
-          <div>
-            <div class="flex justify-between items-center mb-4">
-              <h3 class="text-2xl font-extrabold text-blue-400">EduAniAI (EduAnim AI Pro)</h3>
-              <button onclick="toggleAppChat()" class="clean-link-card" style="width: 40px; height: 40px; border-radius: 12px;" title="Ask App AI Bot">
-                <i class="fa-solid fa-comments" style="font-size: 0.9rem;"></i>
-              </button>
+        <!-- PROJECT 2: APEX AUTOMOBILI (WEB APP) -->
+        <div class="liquid-glass p-8 md:p-10 border border-blue-400/30">
+          <div class="flex flex-wrap justify-between items-center gap-4 mb-4">
+            <div>
+              <h3 class="text-3xl font-extrabold text-blue-400">Apex Automobili</h3>
+              <p class="text-cyan-300 font-semibold italic mt-1 font-mono">"Engineering Beyond Physics"</p>
             </div>
-            <p class="text-cyan-300 font-semibold italic text-sm mb-4 font-mono">"Turning Textbooks into Movies."</p>
-            <p class="text-gray-300 text-sm leading-relaxed mb-4">
-              An advanced AI text-to-video pipeline converting NCERT textbooks and prompts into dynamic animated video lectures using Gemini Flash API, gTTS, Python MoviePy, and FFmpeg presets.
-            </p>
+            <a href="https://rajjuubhai16.github.io/ApexAutomobili/" target="_blank" class="cta-btn-primary py-2.5 px-6 text-sm">
+              View Live App <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
           </div>
-          <p class="text-blue-400 font-mono text-xs pt-3 border-t border-white/10">Tech: Python, Gemini API, MoviePy, FFmpeg</p>
+
+          <p class="text-gray-200 text-lg leading-relaxed my-6">
+            <strong>🚗 What is Apex Automobili?</strong> A high-end hypercar showroom web application engineered by Rajat. It delivers an immersive automotive exploration experience with cutting-edge visual design and responsive interfaces.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
+            <div class="liquid-glass p-5">
+              <h4 class="font-bold text-blue-400 mb-2 text-lg">🏎️ 3D Motion Showroom</h4>
+              <p class="text-gray-300 text-sm">Interactive hypercar fleet presentation with motion displays and immersive galleries.</p>
+            </div>
+            <div class="liquid-glass p-5">
+              <h4 class="font-bold text-blue-400 mb-2 text-lg">📊 Specs & Glass Showroom</h4>
+              <p class="text-gray-300 text-sm">Deep-dive technical data comparing horsepower, battery range, and G-force stats.</p>
+            </div>
+            <div class="liquid-glass p-5">
+              <h4 class="font-bold text-blue-400 mb-2 text-lg">🛠️ Bespoke Customizer</h4>
+              <p class="text-gray-300 text-sm">Custom configuration suite allowing users to tailor hypercar paints, interiors, and wheels.</p>
+            </div>
+          </div>
+
+          <p class="text-cyan-400 font-mono text-sm mt-4">
+            <strong>⚙️ Tech Stack:</strong> HTML5, Modern CSS3, JavaScript, Responsive UI/UX Architecture.
+          </p>
         </div>
       </div>
     </section>
@@ -583,11 +625,11 @@
       </div>
       <div class="chat-body" id="personalChatBody">
         <div class="msg ai-msg">
-          Hi! I am **Rajat Rai AI Assistant**. Ask me about Rajat's deep research, white coding, Apex Automobili project, or IIT Jodhpur studies!
+          Hi! I am **Rajat Rai AI Assistant**. Ask me about Rajat's EduAniAI project, Apex Automobili, deep research, or IIT Jodhpur studies!
         </div>
       </div>
       <div class="chat-footer">
-        <input type="text" id="personalChatInput" placeholder="Ask e.g. Apex Automobili, Skills..." onkeypress="if(event.key==='Enter') sendPersonalChat();">
+        <input type="text" id="personalChatInput" placeholder="Ask e.g. EduAniAI, ISRO..." onkeypress="if(event.key==='Enter') sendPersonalChat();">
         <button onclick="sendPersonalChat()"><i class="fa-solid fa-paper-plane"></i></button>
       </div>
     </div>
@@ -602,7 +644,7 @@
       </div>
       <div class="chat-body" id="appChatBody">
         <div class="msg ai-msg">
-          Welcome! I am the **EduAniAI Knowledge Assistant** (Trained on Rajat's Developer Database). Ask me about Pitch, Architecture, Academic/Character Modules, or Gemini API!
+          Welcome! I am the **EduAniAI Knowledge Assistant** (Trained on Rajat's Developer Database). Ask me about Pitch, Architecture, Academic/Character/Director Modules, or Gemini API!
         </div>
       </div>
       <div class="chat-footer">
@@ -710,7 +752,7 @@
       renderer.setSize(window.innerWidth, window.innerHeight);
     });
 
-    // CHATBOT 1 LOGIC (UPDATED WITH APEX AUTOMOBILI PROJECT)
+    // CHATBOT 1 LOGIC (PERSONAL BOT)
     let isPersonalChatOpen = false;
     function togglePersonalChat() {
       const win = document.getElementById('personal-chat-window');
@@ -726,13 +768,15 @@
       input.value = ''; chatBody.scrollTop = chatBody.scrollHeight;
 
       setTimeout(() => {
-        let reply = "I can help you with Rajat Rai's portfolio, Apex Automobili project, white coding, or technical stack!";
+        let reply = "I can help you with Rajat Rai's portfolio, EduAniAI, Apex Automobili, white coding, or technical stack!";
         const q = text.toLowerCase();
         
         if (q.includes('who') || q.includes('rajat') || q.includes('about')) {
-          reply = "Rajat Rai is an AI Architect and BS student in Applied AI and Data Science at **IIT Jodhpur**. He specializes in deep research, white coding, and building autonomous systems.";
+          reply = "Rajat Rai is an AI Architect and BS student in Applied AI and Data Science at **IIT Jodhpur**. He specializes in deep research, white coding, and building autonomous AI systems like EduAniAI.";
+        } else if (q.includes('eduaniai') || q.includes('eduani') || q.includes('textbook')) {
+          reply = "**EduAniAI** is Rajat's flagship AI app that turns static NCERT textbooks into animated movies using Gemini API, gTTS, and MoviePy!";
         } else if (q.includes('apex') || q.includes('car') || q.includes('automobili')) {
-          reply = "**Apex Automobili** is Rajat's featured hypercar showroom web app featuring 3D Motion showcases, 50+ Hypercars fleet specs, Glass Showroom, and a Bespoke Customizer! Link: https://rajjuubhai16.github.io/ApexAutomobili/";
+          reply = "**Apex Automobili** is Rajat's high-end hypercar web app featuring 3D Motion, specs, glass showroom, and a bespoke customizer! Link: https://rajjuubhai16.github.io/ApexAutomobili/";
         } else if (q.includes('skill') || q.includes('coding') || q.includes('white') || q.includes('prompt')) {
           reply = "Rajat excels in **White Coding** and **Advanced Prompt Engineering**! He structures logic cleanly, writes multi-stage prompts to extract peak performance from AI, and masters Python backend scripting.";
         } else if (q.includes('research') || q.includes('deep')) {
@@ -748,7 +792,7 @@
       }, 400);
     }
 
-    // CHATBOT 2 LOGIC
+    // CHATBOT 2 LOGIC (EDUANIAI KNOWLEDGE BOT)
     let isAppChatOpen = false;
     function toggleAppChat() {
       const window = document.getElementById('app-chat-window');
@@ -756,7 +800,7 @@
       isAppChatOpen = !isAppChatOpen;
     }
 
-    2function sendAppChat() {
+    function sendAppChat() {
       const input = document.getElementById('appChatInput');
       const text = input.value.trim(); if (!text) return;
       const chatBody = document.getElementById('appChatBody');
@@ -766,8 +810,13 @@
       setTimeout(() => {
         let reply = "Ask me about EduAniAI's Elevator Pitch, Architecture, Academic/Character/Director Modules!";
         const q = text.toLowerCase();
-        if (q.includes('what') || q.includes('pitch') || q.includes('eduaniai')) reply = "**EduAniAI (EduAnim AI Pro)** (Created by Rajat) is an advanced AI text-to-video pipeline turning textbooks into movies!";
-        else if (q.includes('how') || q.includes('work')) reply = "**Core Pipeline:** Vision Input -> Gemini 2.5 Flash API Scripting -> gTTS Audio Sync -> Python MoviePy & FFmpeg Rendering.";
+        if (q.includes('what') || q.includes('pitch') || q.includes('eduaniai')) {
+          reply = "**EduAniAI (EduAnim AI Pro)** (Created by Rajat) is an advanced AI text-to-video pipeline turning static textbooks into dynamic video lectures for students in Tier-2/3 cities.";
+        } else if (q.includes('module') || q.includes('academic') || q.includes('character') || q.includes('director')) {
+          reply = "**EduAniAI Modules:** \n1. **Academic Module:** Class 1-12 NCERT mapped chapters.\n2. **Character Module:** 7-minute deep-dive video simulations with avatars.\n3. **Director's Module:** Custom user prompt to educational movie creator.";
+        } else if (q.includes('how') || q.includes('work') || q.includes('pipeline') || q.includes('architecture')) {
+          reply = "**Core Pipeline:** Vision Input -> Google Gemini 2.5 Flash API Scripting -> gTTS Audio Sync -> Python MoviePy & FFmpeg Ultrafast Rendering Presets (.mp4 output).";
+        }
 
         chatBody.innerHTML += `<div class="msg ai-msg">${reply}</div>`;
         chatBody.scrollTop = chatBody.scrollHeight;
